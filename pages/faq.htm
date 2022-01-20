@@ -1,0 +1,113 @@
+url = "/faq"
+layout = "default"
+title = "Questions and Answers"
+
+[Middleware]
+==
+<!-- main informative part of the page -->
+<main class="main">
+    <div class="main-container-row d-lg-flex">
+        {% partial 'site/sidebar' %}
+      <div class="content-container">
+        <div class="content-header d-lg-flex">
+          <h2 class="m-0">שאלות ותשובות</h2>
+          <a href="#" class="loggedin-user-info d-none d-lg-flex align-items-center align-self-start me-auto text-decoration-none fw-bold">
+            <img src="{{ 'assets/images/user-avatar.svg'|theme }}" alt="שיר בראל">
+            <span class="user_name">שיר בראל</span>
+          </a>
+        </div>
+        <div class="top-info-text">
+          <p>ריכזנו עבורך שאלות ותשובות נפוצות על מנת לעזור לך להרגיש בטוח/ה ברכישה שלך.</p>
+          <p><strong>לא מצאתם תשובה לשאלה?</strong> פנו אלינו בטלפון 04-6767640</p>
+        </div>
+        <div class="row dashboard-row">
+          <div class="col-12 col-lg-7">
+            <div class="faqs-box">
+              <div class="accordion accordion-flush" id="faqHome">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading1">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq1" aria-expanded="false" aria-controls="homeFaq1">
+                      האם אתם מבצעים תשלומים לכל סוגי השירותים?
+                    </button>
+                  </h2>
+                  <div id="homeFaq1" class="accordion-collapse collapse" aria-labelledby="faq-heading1" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading2">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq2" aria-expanded="false" aria-controls="homeFaq2">
+                      במידה ויש שינויים בהזמנת הרכש, <br> האם אפשר לשנות את ההזמנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq2" class="accordion-collapse collapse" aria-labelledby="faq-heading2" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה <br> כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה <br>כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading3">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq3" aria-expanded="false" aria-controls="homeFaq3">
+                      איך מבצעים הזמנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq3" class="accordion-collapse collapse" aria-labelledby="faq-heading3" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading4">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq4" aria-expanded="false" aria-controls="homeFaq4">
+                      האם המערכת מבצעת גם הזמנה של שוברי מתנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq4" class="accordion-collapse collapse" aria-labelledby="faq-heading4" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading5">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq5" aria-expanded="false" aria-controls="homeFaq5">
+                      איך מבצעים הזמנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq5" class="accordion-collapse collapse" aria-labelledby="faq-heading5" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading6">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq6" aria-expanded="false" aria-controls="homeFaq6">
+                      איך מבצעים הזמנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq6" class="accordion-collapse collapse" aria-labelledby="faq-heading6" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading7">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq7" aria-expanded="false" aria-controls="homeFaq7">
+                      איך מבצעים הזמנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq7" class="accordion-collapse collapse" aria-labelledby="faq-heading7" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq-heading8">
+                    <button class="acc-btn w-100 d-block position-relative text-end collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq8" aria-expanded="false" aria-controls="homeFaq8">
+                      איך מבצעים הזמנה?
+                    </button>
+                  </h2>
+                  <div id="homeFaq8" class="accordion-collapse collapse" aria-labelledby="faq-heading8" data-bs-parent="#faqHome">
+                    <div class="accordion-body">כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה כאן תופיע התשובה לשאלה.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

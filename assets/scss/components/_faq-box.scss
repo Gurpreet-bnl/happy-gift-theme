@@ -1,0 +1,84 @@
+.top-info-text {
+  font-size: rem-calc(12px);
+  line-height: 1.5;
+  padding: 0 0 rem-calc(8px);
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    margin: -2px 0 0;
+    padding-bottom: 22px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: rem-calc(10px);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem-calc(5px);
+    }
+  }
+}
+
+.faqs-box {
+  border-radius: rem-calc(10px);
+  background: #fff;
+  padding: rem-calc(10px);
+  margin: 0 rem-calc(-5px 30px);
+
+  @include media-breakpoint-up(md) {
+    padding: 19px 20px 0;
+    border-radius: rem-calc(15px);
+    max-width: 544px;
+    margin: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: rem-calc(20px);
+  }
+
+  .accordion {
+    max-height: none;
+
+    .acc-btn {
+      padding-right: rem-calc(2px);
+
+      @include media-breakpoint-up(md) {
+        padding-right: rem-calc(10px);
+        padding-left: rem-calc(30px);
+      }
+
+      &:after {
+        color: #ef1d74;
+
+        @include media-breakpoint-up(md) {
+          font-size: rem-calc(14px);
+          left: rem-calc(12px);
+        }
+      }
+    }
+
+    .accordion-body {
+      @include media-breakpoint-up(md) {
+        padding: 0 10px 7px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: -3px;
+      }
+    }
+  }
+
+  .accordion-item {
+    &:nth-child(2n+1) {
+      background: #f5f8fb;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.sidebar {
+  width: rem-calc(165px);
+  background: #fff;
+  padding-bottom: rem-calc(15px);
+
+  @include media-breakpoint-down(lg) {
+    box-shadow: 0 0 rem-calc(10px) #d5e0eb;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    padding-top: rem-calc(60px);
+    opacity: 0;
+    visibility: hidden;
+    transform: transalte(100%,0);
+    transition: 0.25s ease opacity, 0.25s ease visbility, 0.25s ease transform;
+
+    .side_menu_active & {
+      opacity: 1;
+      visibility: visible;
+      transform: transalte(0,0);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: rem-calc(50px);
+  }
+
+  @include media-breakpoint-up(md) {
+    width: rem-calc(200px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: rem-calc(223px);
+    border-radius: rem-calc(30px) 0 0 rem-calc(30px);
+    background: linear-gradient(#f1622c 0%, #ef1d74 100%);
+    padding: 0 rem-calc(11px);
+  }
+
+  .sidebar-logo {
+    width: rem-calc(179px);
+    margin-top: rem-calc(47px);
+    margin-bottom: rem-calc(47px);
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .side-btn-wrap {
+    .btn {
+      min-width: rem-calc(130px);
+
+      @include media-breakpoint-up(lg) {
+        min-width: rem-calc(200px);
+        border-color: $white;
+        background: $white;
+        color: #f1622c;
+      }
+    }
+  }
+}
+
+.sidebar-menu {
+  font-size: rem-calc(13px);
+  line-height: 1.5;
+  padding: rem-calc(14px 6px 6px);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(15px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem-calc(16px);
+    line-height: 1.3125;
+    padding: 0 0 rem-calc(30px);
+  }
+
+  >ul {
+    >li {
+      margin-bottom: rem-calc(3px);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: rem-calc(2px);
+      }
+
+      &.current-menu-item,
+      &:hover {
+        >a {
+          @include media-breakpoint-up(lg) {
+            background: rgba(#fff,0.25);
+          }
+        }
+      }
+
+      >a {
+        display: block;
+        padding: rem-calc(4px 8px);
+
+        @include media-breakpoint-up(lg) {
+          padding: rem-calc(8px 17px);
+          border-radius: rem-calc(100px);
+          transition: 0.25s ease background;
+        }
+      }
+    }
+  }
+
+  ul {
+    @extend %listreset;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+
+    @include media-breakpoint-up(lg) {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "matat/happy-gift-theme",
+    "type": "october-theme",
+    "description": "Happy-Gift",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

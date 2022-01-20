@@ -1,0 +1,38 @@
+description = "Simple layout"
+==
+<!DOCTYPE html>
+<html lang="he-IL" dir="rtl">
+<html>
+    <head>
+        <!-- set the encoding of your site -->
+        <meta charset="utf-8">
+        <!-- set the viewport width and initial-scale on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ this.page.title }}</title>
+        <link href="{{ 'assets/css/bootstrap.min.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/style.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/matat.css'|theme }}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        {% styles %}
+        
+    </head>
+    <body class="rtl {{ this.page.id }}">
+        <!-- allow a user to go to the main content of the page -->
+        <a class="visually-hidden visually-hidden-focusable" href="#main" accesskey="m">Skip to Content</a>
+        <a class="visually-hidden visually-hidden-focusable" href="#" accesskey="c">Contact Us</a>
+        <section id="layout-content" class="wrapper">
+            {% page %}
+        </section>
+        <!-- allow a user to go to the top of the page -->
+        <a class="visually-hidden visually-hidden-focusable" href="#wrapper" accesskey="h">Back top top</a>
+
+        <script src="{{ 'assets/js/jquery-3.6.0.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap.bundle.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.main.js'|theme }}"></script>
+        <script src="{{ 'assets/js/matat.js'|theme }}"></script>
+        {% framework %}
+        {% scripts %}
+    </body>
+</html>

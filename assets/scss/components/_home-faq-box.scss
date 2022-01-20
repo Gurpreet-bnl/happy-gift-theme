@@ -1,0 +1,138 @@
+.home-faqs-box {
+  border-radius: rem-calc(10px);
+  background: linear-gradient(#f1622c 0%, #ef1d74 100%);
+  padding: rem-calc(10px);
+  margin-bottom: rem-calc(30px);
+
+  @include media-breakpoint-up(md) {
+    padding: 21px 15px 0;
+    border-radius: rem-calc(15px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: rem-calc(20px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-right: 16px;
+  }
+
+  .faq-heading {
+    text-align: center;
+    font-size: rem-calc(13px);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 rem-calc(10px);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(15px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(16px);
+      margin-bottom: rem-calc(15px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: rem-calc(18px);
+      margin-bottom: rem-calc(19px);
+    }
+  }
+}
+
+.accordion {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 -6px;
+  padding: 0 6px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 rem-calc(-15px);
+    padding: 0 rem-calc(15px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-height: rem-calc(438px);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(#fff, 0.3);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  .accordion-item {
+    margin: 0 0 rem-calc(10px);
+    border: none;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-radius: rem-calc(5px);
+    padding: 0 rem-calc(5px);
+    font-size: rem-calc(12px);
+    line-height: 1.333333;
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(13px);
+      line-height: 1.5714;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem-calc(15px);
+      border-radius: rem-calc(10px);
+      font-size: rem-calc(14px);
+    }
+  }
+
+  .accordion-header {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+  }
+
+  .acc-btn {
+    border: none;
+    outline: none;
+    padding: rem-calc(8px 0 8px 16px);
+    margin: 0;
+    background: none;
+    font-weight: 500;
+    color: #000;
+    font-size: inherit;
+    line-height: inherit;
+    min-height: rem-calc(39px);
+
+    @include media-breakpoint-up(md) {
+      min-height: rem-calc(50px);
+    }
+
+    &:not(.collapsed) {
+      color: #ef1d74;
+
+      &:after {
+        content: '\e906';
+      }
+    }
+
+    &:after {
+      content: '\e907';
+      position: absolute;
+      top: 50%;
+      left: rem-calc(4px);
+      transform: translate(0,-50%);
+      font: #{rem-calc(8px)}/1 'icomoon';
+    }
+  }
+
+  .accordion-body {
+    padding: 0 0 rem-calc(7px);
+  }
+}

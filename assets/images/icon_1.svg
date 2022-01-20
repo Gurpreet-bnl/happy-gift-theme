@@ -1,0 +1,29 @@
+<svg id="Group_9556" data-name="Group 9556" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.027" height="44.077" viewBox="0 0 36.027 44.077">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.156" x2="0.937" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ef1d74"/>
+      <stop offset="1" stop-color="#f1622c"/>
+    </linearGradient>
+    <filter id="Ellipse_5" x="2.027" y="10.077" width="34" height="34" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_98" data-name="Group 98">
+    <g id="clipboard_3_" data-name="clipboard (3)">
+      <g id="Group_97" data-name="Group 97">
+        <path id="Path_82" data-name="Path 82" d="M92.563,3.47H89.154V3a.867.867,0,0,0-.867-.867h-1.4a3,3,0,0,0-5.754,0h-1.4A.867.867,0,0,0,78.871,3V3.47H75.463a.867.867,0,0,0-.867.867V25.712a.867.867,0,0,0,.867.867h17.1a.867.867,0,0,0,.867-.867V4.336A.867.867,0,0,0,92.563,3.47Zm-11.958.4h1.271A.867.867,0,0,0,82.742,3a1.271,1.271,0,0,1,2.542,0,.867.867,0,0,0,.867.867h1.271V5.229H80.6Zm6.842,17.5H80.579a.867.867,0,0,1,0-1.733h6.868a.867.867,0,0,1,0,1.733Zm0-4.6H80.579a.867.867,0,0,1,0-1.733h6.868a.867.867,0,0,1,0,1.733Zm0-4.6H80.579a.867.867,0,0,1,0-1.733h6.868a.867.867,0,0,1,0,1.733Z" transform="translate(-74.596)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_5)">
+      <g id="Ellipse_5-2" data-name="Ellipse 5" transform="translate(11.03 16.08)" fill="#fff" stroke="#ef1d74" stroke-width="1">
+        <circle cx="8" cy="8" r="8" stroke="none"/>
+        <circle cx="8" cy="8" r="7.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+  <path id="Path_83" data-name="Path 83" d="M18,9v4.89l3.26,1.63" transform="translate(1.185 10.394)" fill="none" stroke="#ef1d74" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+</svg>

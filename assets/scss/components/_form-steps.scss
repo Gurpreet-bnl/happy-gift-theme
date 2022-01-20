@@ -1,0 +1,84 @@
+.form-steps-nav {
+  background: #fff;
+  box-shadow: 0 rem-calc(4px) rem-calc(15px) rgba(0, 0, 0, 0.06);
+  padding: rem-calc(6px 6px 7px);
+  margin: 0 rem-calc(-15px 16px);
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 0 -35px 29px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-left: -45px;
+    margin-right: -45px;
+  }
+
+  ul {
+    @extend %listreset;
+    counter-reset: stepcounter;
+    font-weight: 700;
+    font-size: rem-calc(9.5px);
+    line-height: 1.25;
+
+    @include media-breakpoint-up(md) {
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+    }
+
+    .active,
+    .completed {
+      >a {
+        color: #f52796;
+
+        &:before {
+          background: linear-gradient(#f16a24 0%, #ed1b69 100%);
+          border-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+
+    a {
+      color: #bdbdbd;
+
+      &:before {
+        content: counters(stepcounter, ".");
+        counter-increment: stepcounter;
+        width: rem-calc(18px);
+        height: rem-calc(18px);
+        border: 1px solid #bdbdbd;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 rem-calc(3px);
+
+        @include media-breakpoint-up(md) {
+          width: 23px;
+          height: 23px;
+          font-size: 11px;
+          margin: 0 0 0 9px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          width: 28px;
+          height: 28px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+url = "/future_orders"
+layout = "default"
+title = "Future Orders"
+
+[Future-Orders]
+
+[Middleware]
+==
+<!-- main informative part of the page -->
+<main class="main">
+    <div class="main-container-row d-lg-flex">
+        {% partial 'site/sidebar' %}
+      <div class="content-container">
+        <div class="content-header d-lg-flex">
+          <h2 class="m-0 d-flex align-items-center justify-content-center justify-content-md-start"><img src="{{ 'assets/images/icon_2.svg'|theme }}" alt="icon"> הזמנות שבוצעו</h2>
+          <a href="#" class="loggedin-user-info d-none d-lg-flex align-items-center align-self-start me-auto text-decoration-none fw-bold">
+            <img src="{{ 'assets/images/user-avatar.svg'|theme }}" alt="שיר בראל">
+            <span class="user_name">שיר בראל</span>
+          </a>
+        </div>
+        <div class="orders-table-wrap">
+            {% component 'Future-Orders' %}
+        </div>
+      </div>
+    </div>
+</main>

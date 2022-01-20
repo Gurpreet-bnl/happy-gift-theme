@@ -1,0 +1,370 @@
+.form-box {
+  border-radius: rem-calc(10px);
+  background: #fff;
+  box-shadow: 0 8px 20px #d5e0eb;
+  margin: 0 0 rem-calc(25px);
+  padding: rem-calc(15px 9.5px) 0;
+
+  @include media-breakpoint-up(md) {
+    border-radius: rem-calc(15px);
+    padding: 20px 15px 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    border-radius: rem-calc(20px);
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    margin-bottom: rem-calc(14.5px);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem-calc(16px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: rem-calc(20.5px);
+    }
+  }
+
+  .row {
+    margin-left: rem-calc(-3.5px);
+    margin-right: rem-calc(-3.5px);
+
+    @include media-breakpoint-up(md) {
+      margin-left: -9.5px;
+      margin-right: -9.5px;
+    }
+
+    >* {
+      padding-left: rem-calc(3.5px);
+      padding-right: rem-calc(3.5px);
+
+      @include media-breakpoint-up(md) {
+        padding-left: 9.5px;
+        padding-right: 9.5px;
+      }
+    }
+
+    .col-7 {
+      @include media-breakpoint-down(sm) {
+        flex-basis: 62%;
+        max-width: 62%;
+      }
+    }
+
+    .col-5 {
+      @include media-breakpoint-down(sm) {
+        flex-basis: 38%;
+        max-width: 38%;
+      }
+    }
+
+    .row {
+      margin-left: rem-calc(-5px);
+      margin-right: rem-calc(-5px);
+
+      @include media-breakpoint-up(md) {
+        margin-left: rem-calc(-7px);
+        margin-right: rem-calc(-7px);
+      }
+
+      >* {
+        padding-left: rem-calc(5px);
+        padding-right: rem-calc(5px);
+
+        @include media-breakpoint-up(md) {
+          padding-left: rem-calc(7px);
+          padding-right: rem-calc(7px);
+        }
+      }
+    }
+  }
+
+  .form-label {
+    display: table;
+    font-weight: 500;
+    font-size: rem-calc(12px);
+    line-height: 1.25;
+    margin-bottom: rem-calc(2px);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(14px);
+      margin-bottom: rem-calc(5px);
+    }
+  }
+
+  label[for="vendor_update"] {
+    ~ .d-flex {
+      padding-top: rem-calc(4px);
+
+      .custom-radio {
+        margin-left: rem-calc(20px);
+
+        @include media-breakpoint-up(md) {
+          margin-left: rem-calc(21px);
+        }
+      }
+    }
+  }
+
+  .payment-checkbox {
+
+    @include media-breakpoint-up(md) {
+      padding-top: rem-calc(30px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: rem-calc(35px);
+    }
+  }
+
+  .order_type {
+    &:first-of-type {
+      padding: rem-calc(5px 0 13px);
+
+      @include media-breakpoint-up(md) {
+        padding: rem-calc(3px 0 8px);
+      }
+    }
+  }
+
+  .position-relative {
+    .icon-search {
+      margin: 0 rem-calc(7.5px);
+
+      @include media-breakpoint-up(md) {
+        font-size: rem-calc(16px);
+        margin: 0 rem-calc(10px);
+      }
+    }
+  }
+}
+
+.form-btn-wrap {
+  .btn {
+    min-width: rem-calc(130px);
+
+    @include media-breakpoint-up(md) {
+      min-width: 180px;
+    }
+  }
+}
+
+.upload_file {
+  label {
+    display: table;
+    font-size: rem-calc(12px);
+    line-height: 1.25;
+    color: #ef1d74;
+    margin: rem-calc(15px) 0 0;
+    padding: 0 rem-calc(19px) 0 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(14px);
+      padding: rem-calc(1px 21px 1px) 0;
+      margin-top: rem-calc(9px);
+    }
+
+    input[type="file"] {
+      opacity: 0;
+    }
+
+    .icon-add-file {
+      font-size: rem-calc(15px);
+      margin-top: rem-calc(-1px);
+
+      @include media-breakpoint-up(lg) {
+        font-size: rem-calc(18px);
+        margin-top: rem-calc(1px);
+      }
+    }
+  }
+}
+
+.btn_add_category {
+  padding: 0;
+  margin: rem-calc(15px) 0 0;
+  outline: none;
+  border: none;
+  background: none;
+  font-weight: 500;
+  color: #ef1d74;
+  font-size: rem-calc(12px);
+  line-height: 1.25;
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    margin-top: 11px;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.commission-amount-box {
+  max-width: rem-calc(150px);
+  min-height: rem-calc(49.5px);
+  border-radius: 3px;
+  background: #f5f8fb;
+  font-size: rem-calc(11px);
+  line-height: 1.25;
+  padding: rem-calc(5px 2px) 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(12px);
+    padding: rem-calc(5px 10px);
+    min-height: rem-calc(62px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: rem-calc(6px);
+    font-size: rem-calc(14px);
+  }
+
+  .amount-label {
+    display: block;
+    font-weight: 500;
+    font-size: rem-calc(12px);
+    margin: 0 0 5px;
+
+    @include media-breakpoint-up(md) {
+      font-size: inherit;
+      margin-bottom: rem-calc(12px);
+    }
+  }
+
+}
+
+.custom-checkbox {
+  label {
+    display: table;
+    font-weight: 500;
+    font-size: rem-calc(12px);
+    line-height: 1.25;
+    position: relative;
+    padding-right: rem-calc(20.5px);
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(14px);
+      line-height: rem-calc(18px);
+      padding-right: rem-calc(24px);
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+
+      &:checked {
+        ~ .fake-input {
+          background: #ef1d74;
+
+          @include media-breakpoint-up(md) {
+            background: #000;
+          }
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .fake-input {
+      position: absolute;
+      top: rem-calc(1px);
+      right: 0;
+      width: rem-calc(13px);
+      height: rem-calc(13px);
+      border: 1px solid #ef1d74;
+      border-radius: rem-calc(3px);
+
+      @include media-breakpoint-up(lg) {
+        border-color: #000;
+        width: rem-calc(16px);
+        height: rem-calc(16px);
+        border-radius: 0;
+      }
+
+      &:before {
+        content: '\e902';
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        color: #fff;
+        font: #{rem-calc(9px)}/1 'icomoon';
+
+        @include media-breakpoint-up(lg) {
+          font-size: rem-calc(11px);
+        }
+      }
+    }
+  }
+}
+
+.custom-radio {
+  label {
+    display: table;
+    font-weight: 500;
+    font-size: rem-calc(12px);
+    line-height: 1.25;
+    position: relative;
+    padding-right: rem-calc(15px);
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(14px);
+      line-height: rem-calc(18px);
+      padding-right: rem-calc(22px);
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+
+      &:checked {
+        ~ .fake-input {
+          background: #ef1d74;
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .fake-input {
+      position: absolute;
+      top: rem-calc(1px);
+      right: 0;
+      width: rem-calc(12px);
+      height: rem-calc(12px);
+      border: 1px solid #ef1d74;
+      border-radius: 50%;
+
+      @include media-breakpoint-up(lg) {
+        width: rem-calc(14px);
+        height: rem-calc(14px);
+        top: rem-calc(2px);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        top: rem-calc(3px);
+        left: rem-calc(3px);
+        right: rem-calc(3px);
+        bottom: rem-calc(3px);
+
+        @include media-breakpoint-up(lg) {
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+html,
+body {
+  height: 100%;
+}
+
+body.login {
+
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(assets/images/login-bg-small.png) 0 0/cover no-repeat;
+    // padding: rem-calc(39px 0 20px);
+
+    @include media-breakpoint-up(md) {
+      background-image: url(assets/images/login-bg.png);
+    }
+  }
+
+  .main {
+    width: 100%;
+  }
+}
+
+.login-form {
+  width: rem-calc(290px);
+  border-radius: rem-calc(10px);
+  background: #fff;
+  box-shadow: 0 0 rem-calc(15px) #d5e0eb;
+  padding: rem-calc(20px 9.5px);
+
+  @include media-breakpoint-up(md) {
+    width: rem-calc(404px);
+    padding: rem-calc(37px 34px);
+  }
+
+  .login-header {
+    font-size: rem-calc(13px);
+    line-height: 1.2;
+    color: $primary;
+    margin-bottom: rem-calc(20px);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(16px);
+      margin-bottom: rem-calc(19px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: rem-calc(18px);
+    }
+  }
+
+  .login-logo {
+    width: rem-calc(162px);
+    margin-bottom: rem-calc(19px);
+
+    @include media-breakpoint-up(md) {
+      width: rem-calc(236px);
+      margin-bottom: rem-calc(40px);
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .form-group {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: rem-calc(15px);
+    }
+  }
+
+  .form-control {
+    background: #f5f8fb;
+    border-color: #f5f8fb;
+
+    @include media-breakpoint-up(md) {
+      border-radius: 6px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border-radius: 10px;
+    }
+  }
+
+  .link_forgetpass {
+    color: #000;
+    margin-left: rem-calc(10px);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(14px);
+    }
+  }
+
+  .btn-wrap {
+    @include media-breakpoint-down(sm) {
+      padding-top: rem-calc(4px);
+    }
+  }
+
+  .btn[type="submit"] {
+    width: rem-calc(130px);
+
+    @include media-breakpoint-up(md) {
+      width: rem-calc(203px);
+    }
+  }
+}

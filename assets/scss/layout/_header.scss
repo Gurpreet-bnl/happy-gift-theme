@@ -1,0 +1,110 @@
+#header {
+  background: linear-gradient(-90deg, #f1622c 0%, #ef1d74 100%);
+  border-radius: 0 0 rem-calc(15px) rem-calc(15px);
+  position: relative;
+  z-index: 99;
+
+  .container {
+    min-height: rem-calc(50px);
+
+    @include media-breakpoint-up(md) {
+      min-height: rem-calc(60px);
+    }
+  }
+
+  .link_add {
+    width: rem-calc(26px);
+    height: rem-calc(26px);
+    background: $white;
+    border-radius: 50%;
+    font-size: rem-calc(20px);
+    line-height: 1;
+    font-weight: 500;
+    color: $hover-color;
+    padding-bottom: rem-calc(2px);
+  }
+
+  .logo {
+    width: rem-calc(125px);
+    padding-right: rem-calc(2px);
+
+    @include media-breakpoint-up(md) {
+      width: rem-calc(150px);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.nav-opener {
+  background: none;
+  outline: none;
+  border: none;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  .nav-bar {
+    font-size: 0;
+    height: 2px;
+    width: rem-calc(24px);
+    background: $white;
+    transition: 0.3s ease-in-out background;
+    display: block;
+    position: relative;
+
+    .nav-active & {
+      background: none;
+      transition-delay: 0.1s
+    }
+
+    .resize-active & {
+      transition: none;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      height: 2px;
+      background: $white;
+      content: "";
+      margin: 0;
+      width: 100%;
+
+      .nav-active & {
+        transition-delay: 0s, 0.3s;
+      }
+
+      .resize-active & {
+        transition: none;
+        transition-delay: 0s, 0s;
+      }
+    }
+
+    &:before {
+      top: rem-calc(-7px);
+      transition: 0.3s ease top 0.3s, 0.3s ease transform 0s, 0.3s ease-in-out background;
+
+      .nav-active & {
+        top: 0;
+        transform: rotate(45deg);
+        transition: 0.3s ease top 0s, 0.3s ease transform 0.3s, 0.3s ease-in-out background;
+      }
+    }
+
+    &:after {
+      bottom: rem-calc(-7px);
+      transition: 0.3s ease bottom 0.3s,0.3s ease transform 0s, 0.3s ease-in-out background;
+
+      .nav-active & {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: 0.3s ease bottom 0s, 0.3s ease transform 0.3s, 0.3s ease width 0.3s, 0.3s ease-in-out background;
+      }
+    }
+  }
+}

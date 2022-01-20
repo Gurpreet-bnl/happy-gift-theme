@@ -1,0 +1,115 @@
+// custom variables and override bootstrap variables
+
+$body-bg: #fff;
+
+$white:  #fff;
+$gray-100: rgba(#2C2C2C, 0.6);
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:  #000;
+
+$blue:    #397eeb;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$colors: ();
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$primary:       #ed1b69;
+$secondary:     #cfdcf0;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "white":      $white,
+  "black":      $black,
+  "dark":       $dark
+), $theme-colors);
+
+// $spacer: 1rem !default;
+// $spacers: () !default;
+// $spacers: map-merge((
+// 	0: 0,
+// 	1: ($spacer * .25),
+// 	2: ($spacer * .5),
+// 	3: $spacer,
+// 	4: ($spacer * 1.5),
+// 	5: ($spacer * 3),
+// 	6: ($spacer * 4.5),
+// 	7: ($spacer * 6),
+// 	8: ($spacer * 7.5),
+// 	9: ($spacer * 9),
+// 	10: ($spacer * 10.5)
+// ), $spacers);
+$body-color : $black;
+$hover-color: #f1622c;
+
+$grid-gutter-width: 1.875rem;
+
+$body-bg:                   #f5f8fb;
+$link-color: $primary;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
+$headings-font-weight:        700;
+$font-family-sans-serif: 'Rubik', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$input-color:                           $black;
+$input-border-color:                    #c4c4c4;
+$input-bg:                              $white;
+$input-box-shadow:                      none;
+
+$font-family-base: $font-family-sans-serif;
+
+$base-min-width: 320px;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
+
+$table-striped-bg: #f5f8fb;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  wxl: 1920px
+);

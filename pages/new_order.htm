@@ -1,0 +1,24 @@
+url = "/new-order"
+layout = "default"
+title = "Create New Order"
+
+[Middleware]
+
+[New-Order]
+==
+<!-- main informative part of the page -->
+<main class="main">
+    <div class="main-container-row d-lg-flex">
+        {% partial 'site/sidebar' %}
+        <div class="content-container">
+          <div class="content-header d-lg-flex">
+            <h2 class="m-0">הזמנה חדשה</h2>
+            <a href="#" class="loggedin-user-info d-none d-lg-flex align-items-center align-self-start me-auto text-decoration-none fw-bold">
+              <img src="{{ 'assets/images/user-avatar.svg'|theme }}" alt="שיר בראל">
+              <span class="user_name">שיר בראל</span>
+            </a>
+          </div>
+          {% component 'New-Order' %}
+        </div>
+    </div>
+</main>

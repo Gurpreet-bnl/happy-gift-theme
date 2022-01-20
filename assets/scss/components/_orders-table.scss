@@ -1,0 +1,246 @@
+.orders-table-wrap {
+  background: #fff;
+  border-radius: rem-calc(10px);
+  padding: rem-calc(8px 10px);
+
+  @include media-breakpoint-up(md) {
+    border-radius: rem-calc(15px);
+    padding: 15px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: rem-calc(20px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: rem-calc(10px 5px) 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: rem-calc(-2px -5px) 0;
+  }
+}
+
+.orders-responsive-table {
+  border: none;
+  font-size: rem-calc(12px);
+  line-height: 1.5;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(14px);
+  }
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    thead,tbody,th,td {
+      display: block;
+    }
+
+    tbody {
+      tr {
+        margin-bottom: rem-calc(15px);
+
+        &.row_active {
+          td {
+            &.expandable_lg ,
+            &.expandable_md,
+            &.expandable_sm {
+              display: block;
+            }
+
+            &:nth-child(2) {
+              border-top: 1px solid #fff;
+              padding-top: rem-calc(7px);
+            }
+
+            &.link_wrap {
+              padding-top: rem-calc(6px);
+
+              .icon-arrow-down {
+                transform: rotate(180deg);
+              }
+
+              .open_text {
+                display: none;
+              }
+
+              .close_text {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    th,td {
+      flex: 1;
+    }
+
+    td {
+      padding: rem-calc(8px 5px);
+
+      &.expandable_lg ,
+      &.expandable_md,
+      &.expandable_sm {
+        text-align: right;
+      }
+
+      &.link_wrap {
+        padding: 0 0 rem-calc(8px);
+        flex-basis: 100%;
+        max-width: 100%;
+        order: 13;
+      }
+    }
+  }
+
+  td,
+  th {
+    border: none;
+  }
+
+  thead {
+    th {
+      font-weight: 500;
+      padding: 0 0 rem-calc(8px);
+
+      @include media-breakpoint-up(xl) {
+        padding: 8px 0 23px;
+      }
+    }
+  }
+
+  tbody {
+    @include media-breakpoint-up(xl) {
+      td {
+        &:first-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &:nth-last-child(2) {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+    }
+
+    tr {
+      @include media-breakpoint-down(xl) {
+        border-radius: rem-calc(15px);
+        overflow: hidden;
+      }
+      @include media-breakpoint-down(lg) {
+        border-radius: rem-calc(10px);
+      }
+      @include media-breakpoint-down(md) {
+        border-radius: rem-calc(7.5px);
+      }
+
+      td {
+        @include media-breakpoint-up(xl) {
+          padding: 22px 0;
+        }
+      }
+
+      a:not(.data_exap_link) {
+        color: #ef1d74;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .note_text {
+    font-weight: 700;
+
+    &.awaiting {
+      color: #ef1d74;
+    }
+
+    &.not-approved {
+      color: rgba(#000,0.51);
+    }
+  }
+
+  .expandable_lg {
+    @include media-breakpoint-down(xl) {
+      display: none;
+      padding: rem-calc(6px 9px) 0;
+      flex-basis: 100%;
+      max-width: 100%;
+      order: 13;
+
+      &:before {
+        content: attr(data-title) ':';
+      }
+    }
+  }
+
+  .expandable_md {
+    @include media-breakpoint-down(lg) {
+      display: none;
+      padding: rem-calc(6px 9px) 0;
+      flex-basis: 100%;
+      max-width: 100%;
+      order: 13;
+
+      &:before {
+        content: attr(data-title) ':';
+      }
+    }
+  }
+
+  .expandable_sm {
+    @include media-breakpoint-down(md) {
+      display: none;
+      padding: rem-calc(6px 9px) 0;
+      flex-basis: 100%;
+      max-width: 100%;
+      order: 13;
+
+      &:before {
+        content: attr(data-title) ':';
+      }
+    }
+  }
+
+  .expandable_lg ,
+  .expandable_md,
+  .expandable_sm {
+    @include media-breakpoint-down(xl) {
+      &:before {
+        color: #979797;
+        font-weight: 500;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .data_exap_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ef1d74;
+    font-weight: 500;
+    text-decoration: none;
+
+    .close_text {
+      display: none;
+    }
+
+    .icon-arrow-down {
+      font-size: rem-calc(7px);
+      margin: 0 rem-calc(4px -0.5px) 0;
+    }
+  }
+}

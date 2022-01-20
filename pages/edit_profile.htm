@@ -1,0 +1,132 @@
+url = "/edit-profile"
+layout = "default"
+title = "Profile Setting"
+
+[Profile]
+
+[Middleware]
+==
+<?php
+function onStart() {
+    $name = $this->param('user_id');
+}
+?>
+==
+<!-- main informative part of the page -->
+<main class="main">
+    <div class="main-container-row d-lg-flex">
+        {% partial 'site/sidebar' %}
+        <div class="content-container">
+          <div class="content-header d-lg-flex">
+            <h2 class="m-0">הגדרות פרופיל</h2>
+            <a href="#" class="loggedin-user-info d-none d-lg-flex align-items-center align-self-start me-auto text-decoration-none fw-bold">
+              <img src="{{ 'assets/images/user-avatar.svg'|theme }}" alt="שיר בראל">
+              <span class="user_name">שיר בראל</span>
+            </a>
+          </div>
+          <div class="main-form-wrapper">
+            <form action="#" class="custom-form">
+              <div class="row g-xl-5 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                  <div class="user-info-box">
+                    <strong class="info-title d-block">הסכם התקשרות:</strong>
+                    <span class="data d-block"><a href="#">לחץ לצפייה</a> בהסכם התקשרות</span>
+                    <strong class="info-title d-block">תנאי תשלום:</strong>
+                    <span class="data d-block">שוטף 60</span>
+                    <strong class="info-title d-block">מודל עמלות:</strong>
+                    <span class="data d-block">
+                      מינימום עמלה ₪50
+                      <br>5% עמלה
+                    </span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-box">
+                    <div class="row">
+                      <div class="form-group col-fill">
+                        <label for="profile_company_name" class="form-label">שם החברה</label>
+                        <input type="text" class="form-control" id="profile_company_name" value="מתת טכנולוגיות">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="profile_contact" class="form-label">איש קשר</label>
+                        <input type="text" class="form-control" id="profile_contact" value="שיר">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="profile_phone" class="form-label">מספר טלפון</label>
+                        <input type="tel" class="form-control" id="profile_phone" value="0523255555">
+                      </div>
+                      <div class="form-group col-fill">
+                        <label for="profile_email" class="form-label">כתובת דוא"ל</label>
+                        <input type="email" class="form-control" id="profile_email" value="Shir@gmail.com">
+                        <button class="btn_add_category" type="button">צור קטגוריה חדשה +</button>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="profile_user_name" class="form-label">שם משתמש</label>
+                        <input type="text" class="form-control" id="profile_user_name" value="{{ profileData['name'] }}">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="profile_phone_edit" class="form-label">מספר טלפון</label>
+                        <input type="tel" class="form-control" id="profile_phone_edit" value="{{ profileData['phone'] }}">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="profile_email_edit" class="form-label">כתובת דוא"ל</label>
+                        <input type="email" class="form-control" id="profile_email_edit" value="{{ profileData['Email'] }}">
+                      </div>
+                      {# <div class="form-group col-md-6">
+                        <label for="profile_password" class="form-label">סיסמה</label>
+                        <div class="position-relative">
+                          <input type="password" class="form-control" id="profile_password" value="2326hry8">
+                          <a href="javascript:void(0);" class="show_password text-decoration-none position-absolute top-50 start-0 translate-middle-y d-flex"><i class="icon-eye"></i></a>
+                        </div>
+                      </div> #}
+                    </div>
+                  </div>
+                  {# <div class="form-box user-list-box">
+                    <div class="user-list-box">
+                      <strong class="list-title d-block">רשימת המשתמשים:</strong>
+                      <ul class="user-list">
+                        <li class="d-flex flex-wrap">
+                          <span class="user_name">קורל רפאל</span>
+                          <span class="user_email">Coral@gmail.com</span>
+                          <span class="user_phone">0529299009</span>
+                          <div class="user-status">
+                            <label>
+                              <input type="checkbox" checked>
+                              <span class="custom_toggle"></span>
+                              <span class="label-text">
+                                <span class="active_text">פעיל</span>
+                                <span class="inactive_text">לא פעיל</span>
+                              </span>
+                            </label>
+                          </div>
+                          <a href="#" class="edit-user text-decoration-none"><i class="icon-edit"></i></a>
+                        </li>
+                        <li class="d-flex flex-wrap">
+                          <span class="user_name">קורל רפאל</span>
+                          <span class="user_email">Coral@gmail.com</span>
+                          <span class="user_phone">0529299009</span>
+                          <div class="user-status">
+                            <label>
+                              <input type="checkbox">
+                              <span class="custom_toggle"></span>
+                              <span class="label-text">
+                                <span class="active_text">פעיל</span>
+                                <span class="inactive_text">לא פעיל</span>
+                              </span>
+                            </label>
+                          </div>
+                          <a href="#" class="edit-user text-decoration-none"><i class="icon-edit"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div> #}
+                  <div class="form-btn-wrap text-center text-md-start">
+                    <button class="btn btn-primary" type="submit" disabled>שמירה ואישור</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+</main>

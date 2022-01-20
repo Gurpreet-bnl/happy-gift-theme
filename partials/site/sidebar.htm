@@ -1,0 +1,18 @@
+<aside class="sidebar">
+    <div class="sidebar-logo d-none d-lg-block mx-auto">
+        <a href="#">
+            <img src="{{ 'assets/images/logo-white.svg'|theme }}" class="d-block" alt="Happy Gift">
+        </a>
+    </div>
+    <nav class="sidebar-menu">
+        <ul>
+            <li class="{% if this.page.id == 'pending_order' %}current-menu-item{% endif %}"><a href="{{ 'pending_order'|page }}">מסך ראשי</a></li>
+            <li class="{% if this.page.id == 'waiting_orders' %}current-menu-item{% endif %}"><a href="{{ 'waiting_orders'|page }}">הזמנות שממתינות לאישור</a></li>
+            <li class="{% if this.page.id == 'future_orders' %}current-menu-item{% endif %}"><a href="{{ 'future_orders'|page }}">רשימת הזמנות עתידיות</a></li>
+            <li class="{% if this.page.id == 'placed_orders' %}current-menu-item{% endif %}"><a href="{{ 'placed_orders'|page }}">רשימת ההזמנות שבוצעו</a></li>
+            <li class="{% if this.page.id == 'faq' %}current-menu-item{% endif %}"><a href="{{ 'faq'|page }}">שאלות ותשובות</a></li>
+            <li class="{% if this.page.id == 'edit_profile' %}current-menu-item{% endif %}"><a href="edit-profile">הגדרות פרופיל</a></li>
+        </ul>
+    </nav>
+    <div class="side-btn-wrap text-center"><a href="{{ 'new_order'|page }}" class="btn btn-primary">יצירת הזמנה חדשה +</a></div>
+</aside>

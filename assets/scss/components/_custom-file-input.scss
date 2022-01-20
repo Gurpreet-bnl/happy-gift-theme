@@ -1,0 +1,49 @@
+.jcf-file {
+  display: block;
+  border-radius: rem-calc(3px);
+  box-shadow: none;
+  height: calc(#{rem-calc(31px)} + 2px);
+  font-size: rem-calc(12px);
+  line-height: 1.25;
+  padding: rem-calc(8px 7px);
+  border: 1px solid #c4c4c4;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    border-radius: 4px;
+    height: calc(#{rem-calc(38px)} + 2px);
+    font-size: rem-calc(14px);
+    line-height: rem-calc(20px);
+    padding: rem-calc(9px 30px 9px 9px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    border-radius: 6px;
+  }
+
+  .jcf-upload-button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: rem-calc(9px);
+    display: flex;
+
+    &:before {
+      content: '\e900';
+      font: 10px/1 'icomoon';
+
+      @include media-breakpoint-up(lg) {
+        font-size: rem-calc(18px);
+      }
+    }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 200px;
+    height: 200px;
+  }
+}

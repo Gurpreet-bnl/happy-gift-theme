@@ -1,0 +1,42 @@
+<div class="form-box partialFormSec number-form-{{ numerOfForm }}">
+    <div class="row">
+        <div class="form-group col-fill provideCompanyType">
+            <label for="provider_dealer" class="form-label">ח.פ / עוסק מורשה / עוסק פטור  </label>
+            <div class="input-group">
+                <div class="select-wrap">
+                    <select class="form-select" id="provider_companyGovType" class="provider_companyGovType" name="merchant[companyGovType]">
+                        <option selected>בחר מבין האפשרויות</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <input type="text" class="form-control provider_dealer" id="provider_dealer" name="merchant[companyGovId]" placeholder="הקלד מספר">
+            </div>
+        </div>
+        <div class="form-group col-fill">
+            <label for="provider_name" class="form-label">יצירת ספק חדש</label>
+            <input type="text" class="form-control provider_name" id="provider_name" name="merchant[name]" placeholder="הקלד את שם הספק">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="provider_contact" class="form-label">איש קשר</label>
+            <input type="text" class="form-control provider_contact" id="provider_contact" name="merchant[contactPerson]">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="provider_phone" class="form-label">מספר טלפון</label>
+            <input type="tel" class="form-control provider_phone" id="provider_phone" name="merchant[phone]">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="provider_email" class="form-label">כתובת דוא"ל</label>
+            <input type="email" class="form-control provider_email" id="provider_email" name="merchant[Email]">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="provider_phone_book" class="form-label">טלפון הנהלת חשבונות</label>
+            <input type="text" class="form-control provider_phone_book" id="provider_phone_book" name="merchant[officephone]">
+        </div>
+        <div class="form-group col-fill">
+            <label for="provider_website" class="form-label">אתר אינטרנט</label>
+            <input type="text" class="form-control provider_website" id="provider_website" name="merchant[website]">
+        </div>
+    </div>
+</div>

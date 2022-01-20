@@ -1,0 +1,235 @@
+url = "/waiting_orders"
+layout = "default"
+title = "Waiting Orders"
+
+[Waiting-Orders]
+
+[Middleware]
+==
+<!-- main informative part of the page -->
+<main class="main">
+    <div class="main-container-row d-lg-flex">
+        {% partial 'site/sidebar' %}
+      <div class="content-container">
+        <div class="content-header d-lg-flex">
+          <h2 class="m-0 d-flex align-items-center justify-content-center justify-content-md-start"><img src="{{ 'assets/images/icon_2.svg'|theme }}" alt="icon"> הזמנות שבוצעו</h2>
+          <a href="#" class="loggedin-user-info d-none d-lg-flex align-items-center align-self-start me-auto text-decoration-none fw-bold">
+            <img src="{{ 'assets/images/user-avatar.svg'|theme }}" alt="שיר בראל">
+            <span class="user_name">שיר בראל</span>
+          </a>
+        </div>
+        <div class="orders-table-wrap">
+        {% component 'Waiting-Orders' %}
+          {# <table class="table table-striped orders-responsive-table text-center">
+            <thead>
+              <tr>
+                <th>מס' הזמנה</th>
+                <th class="expandable_sm">תאריך</th>
+                <th class="expandable_sm">מס' הזמנת רכש</th>
+                <th class="expandable_sm">שם המזמין</th>
+                <th>שם הספק</th>
+                <th class="expandable_sm expandable_lg">הצעת המחיר</th>
+                <th>מועד אספקה</th>
+                <th class="expandable_sm expandable_lg">סכום לא כולל עמלה</th>
+                <th class="expandable_sm expandable_lg">עמלה</th>
+                <th>סטטוס</th>
+                <th class="d-none">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text awaiting">ממתין לאישור ספק</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text not-approved">לא אושר</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text awaiting">ממתין לאישור ספק</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text not-approved">לא אושר</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text awaiting">ממתין לאישור ספק</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text not-approved">לא אושר</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text awaiting">ממתין לאישור ספק</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text not-approved">לא אושר</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text awaiting">ממתין לאישור ספק</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="מס' הזמנה">1234</td>
+                <td class="expandable_sm" data-title="תאריך">10.10.21</td>
+                <td class="expandable_sm" data-title="מס' הזמנת רכש"><a href="#">5677</a></td>
+                <td class="expandable_sm" data-title="שם המזמין">שיר</td>
+                <td data-title="שם הספק">ביסטרו</td>
+                <td class="expandable_sm expandable_lg" data-title="הצעת המחיר"><a href="#">לחץ לצפייה</a></td>
+                <td data-title="מועד אספקה">18/10/21</td>
+                <td class="expandable_sm expandable_lg" data-title="סכום לא כולל עמלה">₪2000</td>
+                <td class="expandable_sm expandable_lg" data-title="עמלה">₪100</td>
+                <td data-title="סטטוס"><strong class="note_text not-approved">לא אושר</strong></td>
+                <td class="d-xl-none link_wrap">
+                  <a href="#" class="data_exap_link">
+                    <span class="open_text">לפרטים נוספים</span>
+                    <span class="close_text">סגירה</span>
+                    <i class="icon-arrow-down"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table> #}
+        </div>
+      </div>
+    </div>
+</main>

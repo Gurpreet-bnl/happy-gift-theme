@@ -1,0 +1,41 @@
+body.order-page {
+
+  .content-header {
+    @include media-breakpoint-up(xl) {
+      padding-right: 30px;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding-right: 56px;
+    }
+  }
+
+  .form-steps-nav {
+    @include media-breakpoint-up(xl) {
+      padding-right: 65px;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding-right: 101px;
+    }
+  }
+}
+
+.main-form-wrapper {
+  @include media-breakpoint-up(xl) {
+    padding: 0 30px;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding: 0 55px;
+  }
+
+  .g-xl-5 {
+    @include media-breakpoint-up(xxl) {
+      margin-left: rem-calc(-41.5px);
+      margin-right: rem-calc(-41.5px);
+
+      >* {
+        padding-left: rem-calc(41.5px);
+        padding-right: rem-calc(41.5px);
+      }
+    }
+  }
+}
